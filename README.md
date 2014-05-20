@@ -6,7 +6,9 @@ Short example of using jekyll for documentation
 TL;DR
 
 `sudo gem install jekyll`
+
 `git clone git@github.com:sq1agency/jekyll-docs.git`
+
 `jekyll serve --watch`
 
 ##Install Jekyll
