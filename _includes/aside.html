@@ -1,0 +1,19 @@
+<section class="post-aside">
+	<ul class="nav nav-list" data-spy="affix" data-offset-top="56" data-offset-bottom="200">
+		{% for cat in site.category-list %}
+			<li class="title">{{ cat | capitalize }}</li>
+			<ul class="dropdown">
+				{% for page in site.pages %}
+					{% if page.resource == true %}
+						{% for pc in page.categories %}
+							{% if pc == cat %}
+								<li><a href="{{ page.url | prepend: site.baseurl }}">{{ page.page_title | capitalize }}</a></li>
+							{% endif %}
+						{% endfor %}
+					{% endif %}
+				{% endfor %}
+			</ul>
+			<li class="divider"></li>
+		{% endfor %}
+	</ul>
+</section>
